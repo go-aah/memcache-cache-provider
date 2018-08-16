@@ -3,7 +3,7 @@
   <h2 align="center">Memcache Cache Provider by aah framework</h2>
 </p>
 
-Memcache Cache Provider for aah Cache Manager
+Memcache Cache Provider for aah Cache Manager. aah cache library uses [github.com/bradfitz/gomemcache/memcache](https://godoc.org/github.com/bradfitz/gomemcache/memcache) library internally. 
 
 ### News
 
