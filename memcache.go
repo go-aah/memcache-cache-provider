@@ -2,7 +2,7 @@
 // aahframework.org/cache/memcache source code and usage is governed by a MIT style
 // license that can be found in the LICENSE file.
 
-package memcache
+package memcache // import "aahframework.org/cache/memcache"
 
 import (
 	"bytes"
