@@ -12,7 +12,7 @@ Memcache Cache Provider for aah Cache Manager. aah cache library uses [github.co
 ## Installation
 
 ```bash
-go get -u aahframework.org/cache/memcache
+go get -u aahframework.org/cache/provider/memcache
 ```
 
 Visit official website https://aahframework.org to learn more about `aah` framework.
