@@ -1,8 +1,8 @@
 // Copyright (c) Jeevanandam M. (https://github.com/jeevatkm)
-// aahframework.org/cache/provider/memcache source code and usage is governed by a MIT style
+// Source code and usage is governed by a MIT style
 // license that can be found in the LICENSE file.
 
-package memcache // import "aahframework.org/cache/provider/memcache"
+package memcache // import "aahframe.work/cache/provider/memcache"
 
 import (
 	"bytes"
@@ -12,9 +12,9 @@ import (
 	"sync"
 	"time"
 
-	"aahframework.org/aah.v0/cache"
-	"aahframework.org/config.v0"
-	"aahframework.org/log.v0"
+	"aahframe.work/aah/cache"
+	"aahframe.work/aah/config"
+	"aahframe.work/aah/log"
 	"github.com/bradfitz/gomemcache/memcache"
 )
 

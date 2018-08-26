@@ -1,5 +1,5 @@
 // Copyright (c) Jeevanandam M. (https://github.com/jeevatkm)
-// aahframework.org/cache/memcache source code and usage is governed by a MIT style
+// Source code and usage is governed by a MIT style
 // license that can be found in the LICENSE file.
 
 package memcache
@@ -12,10 +12,10 @@ import (
 	"testing"
 	"time"
 
-	"aahframework.org/aah.v0/cache"
-	"aahframework.org/config.v0"
-	"aahframework.org/log.v0"
-	"aahframework.org/test.v0/assert"
+	"aahframe.work/aah/cache"
+	"aahframe.work/aah/config"
+	"aahframe.work/aah/log"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestMemcache(t *testing.T) {
@@ -31,7 +31,7 @@ func TestMemcache(t *testing.T) {
 `)
 
 	e := mgr.CreateCache(&cache.Config{Name: "cache1", ProviderName: "memcache1"})
-	assert.FailNowOnError(t, e, "unable to create cache")
+	assert.Nil(t, e, "unable to create cache")
 	c := mgr.Cache("cache1")
 
 	type sample struct {
@@ -135,7 +135,7 @@ func TestMemcacheMultipleCache(t *testing.T) {
 	names := []string{"testcache1", "testcache2", "testcache3"}
 	for _, name := range names {
 		err := mgr.CreateCache(&cache.Config{Name: name, ProviderName: "memcache1"})
-		assert.FailNowOnError(t, err, "unable to create cache")
+		assert.Nil(t, err, "unable to create cache")
 
 		c := mgr.Cache(name)
 		assert.NotNil(t, c)
@@ -226,13 +226,13 @@ func createCacheMgr(t *testing.T, name, appCfgStr string) *cache.Manager {
 	l, _ := log.New(config.NewEmpty())
 	l.SetWriter(ioutil.Discard)
 	err := mgr.InitProviders(cfg, l)
-	assert.FailNowOnError(t, err, "unexpected")
+	assert.Nil(t, err, "unexpected")
 	return mgr
 }
 
 func createTestCache(t *testing.T, name, appCfgStr string, cacheCfg *cache.Config) cache.Cache {
 	mgr := createCacheMgr(t, name, appCfgStr)
 	e := mgr.CreateCache(cacheCfg)
-	assert.FailNowOnError(t, e, "unable to create cache")
+	assert.Nil(t, e, "unable to create cache")
 	return mgr.Cache(cacheCfg.Name)
 }

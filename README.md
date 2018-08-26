@@ -7,12 +7,12 @@ Memcache Cache Provider for aah Cache Manager. aah cache library uses [github.co
 
 ### News
 
-  * `v0.1.0` [released](https://github.com/aahframework/redis-cache-provider/releases/latest) and tagged on TBD.
+  * `v0.1.0` [released](https://github.com/go-aah/redis-cache-provider/releases/latest) and tagged on TBD.
 
 ## Installation
 
 ```bash
-go get -u aahframework.org/cache/provider/memcache
+go get -u aahframe.work/cache/provider/memcache
 ```
 
 Visit official website https://aahframework.org to learn more about `aah` framework.
